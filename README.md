@@ -7,7 +7,7 @@
 ## Table of Content
 
 - 数组
-- 线性表
+- [链表](LinkedList/README.md)
 - 树
 - 图
 
