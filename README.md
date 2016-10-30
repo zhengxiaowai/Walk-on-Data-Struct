@@ -16,4 +16,4 @@
 - [google-interview-university](https://github.com/jwasham/google-interview-university)
 - [台湾师范大学 CS 讲义](http://www.csie.ntnu.edu.tw/~u91029/)
 - [算法导论（原书第3版）](https://book.douban.com/subject/20432061/)
-- [数据结构（C 语言版本）· 严蔚敏](https://book.douban.com/subject/2024655/)
+- [数据结构（C 语言版）· 严蔚敏](https://book.douban.com/subject/2024655/)
