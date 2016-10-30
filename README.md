@@ -7,7 +7,7 @@
 ## Table of Content
 
 - 数组
-- 链表
+- 线性表
 - 树
 - 图
 
