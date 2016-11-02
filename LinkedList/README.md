@@ -5,7 +5,7 @@
 - [线性表定义](introduction.md)
 - 顺序线性表
 - 链式线性表
-    - 单链表
+    - [单链表](signal-linked-list.md)
     - 双向链表
     - 循环链表
 - 其他线性表
