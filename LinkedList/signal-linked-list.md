@@ -9,6 +9,6 @@
 | 插入   | insert(Head *head, int n, Node *new)  | O(n)      |
 | 删除   | remove(Head *head, int n)             | O(1)/O(n) |
 | 修改   | modify(Head *head, int n, Data *data) | O(n)      |
-| 查询   | search(Head *head, int n)             | O(n)      |
+| 查询   | search(Head *head, Data *data)             | O(n)      |
 
 ## 完整代码
