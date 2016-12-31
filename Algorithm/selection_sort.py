@@ -1,14 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
-from __future__ import absolute_import
-
-import sys as _sys
-_sys.path.append('..')
-
-from random import randrange
-from Utils import TestHelper
-
 
 def selection_sort(array, key=lambda x: x):
     for idx, el in enumerate(array):
@@ -23,5 +15,7 @@ def selection_sort(array, key=lambda x: x):
 
 
 if __name__ == '__main__':
-    test_array = TestHelper.generate_test_array(20000, randrange, 1, 10000)
+    from Utils import TestHelper
+    from random import randrange
+    test_array = TestHelper.generate_test_array(10000, randrange, 1, 10000)
     TestHelper.algorithm_test('Selection Sort', selection_sort, list(test_array))
