@@ -78,7 +78,7 @@ int list_rem_next(List *list, ListElmt *element, void **data)
             list->tail = NULL;
     }
     else
-    {    
+    {
         *data = element->next->data;
         old_element = element->next;
         element->next = old_element->next; /* 书中有错 */
@@ -89,7 +89,7 @@ int list_rem_next(List *list, ListElmt *element, void **data)
 
     free(old_element);
     list->size--;
-    
+
     return 0;
 }
 
@@ -99,7 +99,7 @@ void list_traverse(List *list)
         return;
 
     ListElmt *node = list->head;
-    while(node != NULL)
+    while (node != NULL)
     {
         printf("%d ", *((int *)list_data(node)));
         node = node->next;
@@ -113,7 +113,7 @@ int main()
     List *list = (List *)malloc(sizeof(List));
     if (list == NULL)
         return -1;
-    
+
     list_init(list, free);
     printf("list_init: ");
     list_traverse(list);
@@ -128,7 +128,6 @@ int main()
     list_ins_next(list, list->head->next->next, (void *)&fourth_data);
     printf("list_ins_next: ");
     list_traverse(list);
-
 
     int head_data, *p_head_data;
     int tail_data, *p_tail_data;
