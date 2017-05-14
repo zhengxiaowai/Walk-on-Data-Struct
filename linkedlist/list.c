@@ -49,7 +49,7 @@ int list_ins_next(List *list, ListElmt *element, const void *data)
     else
     {
         if (element->next == NULL)
-            list->tail = element;
+            list->tail = new_element;
 
         new_element->next = element->next;
         element->next = new_element;
