@@ -108,37 +108,37 @@ void list_traverse(List *list)
 }
 
 // unittest
-int main()
-{
-    List *list = (List *)malloc(sizeof(List));
-    if (list == NULL)
-        return -1;
+// int main()
+// {
+//     List *list = (List *)malloc(sizeof(List));
+//     if (list == NULL)
+//         return -1;
 
-    list_init(list, free);
-    printf("list_init: ");
-    list_traverse(list);
+//     list_init(list, free);
+//     printf("list_init: ");
+//     list_traverse(list);
 
-    int first_data = 1;
-    int second_data = 2;
-    int third_data = 3;
-    int fourth_data = 4;
-    list_ins_next(list, NULL, (void *)&first_data);
-    list_ins_next(list, list->head, (void *)&third_data);
-    list_ins_next(list, list->head, (void *)&second_data);
-    list_ins_next(list, list->head->next->next, (void *)&fourth_data);
-    printf("list_ins_next: ");
-    list_traverse(list);
+//     int first_data = 1;
+//     int second_data = 2;
+//     int third_data = 3;
+//     int fourth_data = 4;
+//     list_ins_next(list, NULL, (void *)&first_data);
+//     list_ins_next(list, list->head, (void *)&third_data);
+//     list_ins_next(list, list->head, (void *)&second_data);
+//     list_ins_next(list, list->head->next->next, (void *)&fourth_data);
+//     printf("list_ins_next: ");
+//     list_traverse(list);
 
-    int head_data, *p_head_data;
-    int tail_data, *p_tail_data;
-    p_head_data = &head_data;
-    p_tail_data = &tail_data;
-    list_rem_next(list, NULL, (void **)&p_head_data);
-    list_rem_next(list, list->head->next, (void **)&p_tail_data);
-    printf("remove head node, data is %d\n", *(int *)p_head_data);
-    printf("remove last node, data is %d\n", *(int *)p_tail_data);
-    printf("list_rem_next: ");
-    list_traverse(list);
+//     int head_data, *p_head_data;
+//     int tail_data, *p_tail_data;
+//     p_head_data = &head_data;
+//     p_tail_data = &tail_data;
+//     list_rem_next(list, NULL, (void **)&p_head_data);
+//     list_rem_next(list, list->head->next, (void **)&p_tail_data);
+//     printf("remove head node, data is %d\n", *(int *)p_head_data);
+//     printf("remove last node, data is %d\n", *(int *)p_tail_data);
+//     printf("list_rem_next: ");
+//     list_traverse(list);
 
-    return 0;
-}
+//     return 0;
+// }
