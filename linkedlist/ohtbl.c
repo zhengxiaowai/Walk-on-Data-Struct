@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include <time.h>
 #include "ohtbl.h"
 
 #define O_HASHTBL_POSITIONS 11
@@ -154,13 +155,26 @@ void ohtbl_print(OHTbl *htbl)
         else
             printf("%d\n", *((int *)htbl->table[i]));
     }
+    printf("SIZE: %d\n", htbl->size);
 }
 
 int main()
 {
     OHTbl *htbl = (OHTbl *)malloc(sizeof(OHTbl));
     ohtbl_init(htbl, O_HASHTBL_POSITIONS, hash1, hash2, match, free);
-    ohtbl_print(htbl); 
+    //ohtbl_print(htbl); 
+    
+    printf("[ 插入测试 ]\n");
+    srand(time(0));
+    int i, *pi, created_count = 5;
+    for (i = 0; i < created_count; i++)
+    {
+        pi = (int *)malloc(sizeof(int));
+        *pi = rand() % 100 + 1;
+        if (ohtbl_insert(htbl, (void *)pi) == -1)
+            printf("insert error\n");
+    }
+    ohtbl_print(htbl);
 
     return 0;
 }
