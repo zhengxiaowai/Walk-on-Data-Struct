@@ -8,7 +8,7 @@ typedef struct BiTreeNode_
     void *data;
     struct BiTreeNode_ *left;
     struct BiTreeNode_ *right;
-}BiTreeNode;
+} BiTreeNode;
 
 typedef struct BiTree_
 {
@@ -16,7 +16,7 @@ typedef struct BiTree_
     int (*compare)(const void *key1, const void *key2);
     void (*destroy)(void *data);
     BiTreeNode *root;
-}BiTree;
+} BiTree;
 
 void bitree_init(BiTree *tree, void (*destroy)(void *data));
 void bitree_destroy(BiTree *tree);
